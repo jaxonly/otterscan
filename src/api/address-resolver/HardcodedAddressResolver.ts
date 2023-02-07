@@ -12,8 +12,8 @@ export class HardcodedAddressResolver implements IAddressResolver<string> {
       const addressMap: HardcodedAddressMap = await import(
         `./hardcoded-addresses/${provider.network.chainId}.json`
       );
-
-      return addressMap[address];
+      // @ts-ignore
+      return addressMap.default[address];
     } catch (err) {
       // Ignore on purpose
       return undefined;
