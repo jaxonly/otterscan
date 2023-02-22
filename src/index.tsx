@@ -21,7 +21,7 @@ root.render(
           href={spaceGrotesk}
           as="font"
           type="font/woff2"
-          crossOrigin="true"
+          crossOrigin="anonymous"
         />
       </Helmet>
       <App />
